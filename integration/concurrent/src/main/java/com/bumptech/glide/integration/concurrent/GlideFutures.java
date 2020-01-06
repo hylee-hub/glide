@@ -181,7 +181,6 @@ public final class GlideFutures {
     TargetAndResult(Target<T> target, T result) {
       this.target = target;
       this.result = result;
-      this.result = result;
     }
   }
 
