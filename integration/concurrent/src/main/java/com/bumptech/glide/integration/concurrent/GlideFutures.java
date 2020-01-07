@@ -162,6 +162,12 @@ public final class GlideFutures {
       return true;
     }
 
+    public boolean onLoadFailed2(
+        @Nullable GlideException e, Object model, Target<T> target, boolean isFirst) {
+      completer.setException(e != null ? e : new RuntimeException("Unknown error"));
+      return true;
+    }
+    
     @Override
     public boolean onResourceReady(
         T resource, Object model, Target<T> target, DataSource dataSource, boolean isFirst) {
